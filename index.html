@@ -71,15 +71,15 @@
   <h3>How you can help?</h3>
   <p>The registration process requires us to provide our membership list containing contact information. Please take a moment to add yourself to the official contact list.</p>
 
-  <form action="submit">
+  <form action="">
     <label for="name">First Name</label><br>
-    <input id="name" type="text" pattern="^\S[\s\-A-Za-z\u3130-\u318F\uAC00-\uD7AF]+$" placeholder="First Name" autofocus="true" required autofocus><br>
+    <input id="name" type="text" pattern="^\S[\s\-A-Za-z\u3130-\u318F\uAC00-\uD7AF]*$" placeholder="First Name" autofocus="true" required autofocus><br>
     <label for="surname">Last Name</label><br>
-    <input id="surname" type="text" pattern="^\S[\s\-A-Za-z\u3130-\u318F\uAC00-\uD7AF]+$" placeholder="Last Name" required><br>
+    <input id="surname" type="text" pattern="^\S[\s\-A-Za-z\u3130-\u318F\uAC00-\uD7AF]*$" placeholder="Last Name" required><br>
     <label for="phone">Phone Number</label><br>
     <input id="phone" type="tel" pattern="[0-9\-]{9,}" placeholder="xxx-xxxx-xxxx" required><br>
     <label for="address">Home Address</label><br>
-    <input id="address" type="text" pattern="^\S[0-9\,\.\\\/\s\-A-Za-z\u3130-\u318F\uAC00-\uD7AF]+$" placeholder="Home Address" required><br>
+    <input id="address" type="text" pattern="^\S[0-9\,\.\\\/\s\-A-Za-z\u3130-\u318F\uAC00-\uD7AF]*$" placeholder="Home Address" required><br>
     <button>Submit!</button><br>
   </form>
 
@@ -87,6 +87,25 @@
   <p>We recognize how important privacy is, and it is our priority to completely respect yours. We learned that disclosing our member list to the approving government agency is a routine practice. However, if you feel uncomfortable about sharing your information with SeoulTech, you are more than welcome to opt-out of the contact list.</p>
 
 </article>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script>
+  $('form').submit(function(event) {
+    event.preventDefault();
 
+    var values = $('form').children('input').map(function() {
+      return $(this).val()
+    });
+
+
+    $.post('https://docs.google.com/forms/d/1jgmpE2rvDcI0AiFf76Ct4qIesfb8cEnfy7mQUB3CVOY/formResponse', {
+      entry_424778203: values[0],
+      entry_973320467: values[1],
+      entry_641040038: values[2],
+      entry_2013288510: values[3]
+    }).always(function() {
+      alert('You are awesome! Thank you!')
+    })
+  })
+</script>
 </body>
 </html>
