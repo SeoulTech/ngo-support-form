@@ -1,0 +1,1 @@
+A form to collect member info for ngo registration
