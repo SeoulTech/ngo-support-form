@@ -1,0 +1,114 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+ }
+
+body {
+  margin: 0 auto;
+  width: 80%;
+  font-size: 125%;
+}
+
+img {width: 100%;}
+
+article {
+  margin: 0 auto;
+  width: 80%;
+}
+
+h3 {
+  font-family: Futura, 'Questrial', Helvetica, Arial, sans-serif;
+  margin-bottom: 0;
+}
+
+p {
+  font-family: Georgia, serif;
+  margin-top: 0.5em;
+  color: #333;
+  line-height: 1.5em;
+}
+
+form {
+  border: 1px solid #000;
+  padding: 1em;
+  max-width: 25em;
+  margin: 0 auto;
+}
+
+label {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.8em;
+  text-align: left;
+}
+
+input {
+  height: 2.5em;
+  width: 100%;
+  margin-top: 0.5em;
+  margin-bottom: 1.4em;
+  border-radius: 0;
+}
+
+button {
+  height: 2em;
+  background-color: #000;
+  border: none;
+  font-size: 0.8em;
+  width: 40%;
+  color: #fff;
+}
+
+.invalid {
+  border-color: red;
+}
+
+
+@media screen and (min-device-width : 320px) and (max-device-width : 568px) {
+  body {
+    width: 100%;
+  }
+
+  img {display: none;}
+
+  article {
+    width: 80%;
+    text-align: justify;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  input {
+    height: 2em;
+    font-size: 2em;
+    width: 100%;
+    /*margin-bottom: 2em;*/
+  }
+
+  input[placeholder] {
+    font-size: 0.8em;
+  }
+
+  label {
+    font-size: 0.8em;
+  }
+
+  button {
+    width: 100%;
+    /*height: 3em;
+    line-height: 3em;*/
+    font-size: 1em;
+  }
+
+  .ws-popover {
+    font-size: 1em;
+  }
+}
+
+
+
+
+
+
