@@ -41,6 +41,8 @@
     <input id="surname" type="text" pattern="^\S[\s\-A-Za-z\u3130-\u318F\uAC00-\uD7AF]*$" placeholder="Last Name" required><br>
     <label for="phone">Phone Number</label><br>
     <input id="phone" type="tel" pattern="[0-9\-]{9,}" placeholder="xxx-xxxx-xxxx" required><br>
+    <label for="address">Email</label><br>
+    <input id="address" type="email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" placeholder="you@domain" required><br>
     <label for="address">Home Address</label><br>
     <input id="address" type="text" pattern="^\S[0-9\,\.\\\/\s\-A-Za-z\u3130-\u318F\uAC00-\uD7AF]*$" placeholder="Home Address" required><br>
     <button>Submit!</button><br>
@@ -72,7 +74,8 @@
             entry_424778203: values[0],
             entry_973320467: values[1],
             entry_641040038: values[2],
-            entry_2013288510: values[3]
+            entry_641118318: values[3],
+            entry_2013288510: values[4]
           }).always(function() {
           alert('You are awesome ' + values[0] + '! Thank you!')
         })
