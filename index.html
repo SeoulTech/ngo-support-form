@@ -69,6 +69,18 @@
       title="Please fill your address in English or Korean"
       placeholder="Home Address"
       required><br>
+    <label for="work">Occupation</label><br>
+    <input id="work"
+      type="text"
+      pattern="^\S[0-9\,\.\\\/\s\-A-Za-z\u3130-\u318F\uAC00-\uD7AF]+$"
+      placeholder="Occupation"
+      required><br>  
+    <label for="comment">Comment</label><br>
+    <input id="comment"
+      type="text"
+      pattern="^\S[0-9\,\.\\\/\s\-A-Za-z\u3130-\u318F\uAC00-\uD7AF]+$"
+      title="If you have comment about SeoulTech, please fill here in English or Korean"
+      placeholder="Comment"><br>  
     <button>Submit!</button><br>
   </form>
 
@@ -99,7 +111,9 @@
             entry_973320467: values[1],
             entry_641040038: values[2],
             entry_641118318: values[3],
-            entry_2013288510: values[4]
+            entry_2013288510: values[4],
+            entry_1961871555: values[5],
+            entry_730196090: values[6]
           }).always(function() {
           alert('You are awesome ' + values[0] + '! Thank you!');
           $('form')[0].reset()
